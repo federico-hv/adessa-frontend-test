@@ -3,7 +3,8 @@ import productList from './productList';
 import shoppingCart from './shoppingCart';
 
 const mainReducer = combineReducers({
-   productList
+   productList,
+   shoppingCart
 });
 
 export default mainReducer;

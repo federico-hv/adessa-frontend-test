@@ -2,19 +2,13 @@ import * as services from '../services/productList';
 import v4 from 'uuid';
 import { 
   ADD_ITEM, 
-  RECEIVE_ITEMS, 
-  TOGGLE_ERROR 
+  RECEIVE_ITEMS
 } from '../constants';
 
-const receiveItems = (data)=>({
+export const receiveItems = (data)=>({
     type: RECEIVE_ITEMS,
     data
 });
-
-const toggleError = (state)=>({
-  type: TOGGLE_ERROR,
-  error: state
-}); 
 
 export const requestItems = () => {
   return dispatch => {
@@ -24,7 +18,7 @@ export const requestItems = () => {
             dispatch(receiveItems(res.catalog));
           },
           err => {
-            dispatch(toggleError(true));
+            alert(`Hubo un error al traer los items: ${err.message}`);
           }
         );
     };

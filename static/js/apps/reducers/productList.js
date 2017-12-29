@@ -1,7 +1,6 @@
-import { RECEIVE_ITEMS, TOGGLE_ERROR } from '../constants';
+import { RECEIVE_ITEMS } from '../constants';
 
 const initialState = {
-  error: false,
   items: []
 };
 
@@ -11,11 +10,6 @@ const productList = (state = initialState, action) => {
       return {
         ...state,
         items: action.data
-      };
-    case TOGGLE_ERROR:
-      return {
-        ...state,
-        error: action.error
       };
     default:
       return state;

@@ -11,16 +11,15 @@ const configureStore = () => {
   const middlewares = [thunk];
 
   if(process.env.NODE_ENV !== 'production'){
-    middlewares.push(logger); //Logger is configurable
+    middlewares.push(logger);
   }
 
-  //Remember to add persistedState before the Enhancer if available
   return createStore(
     mainReducer,
     composeEnhancers(
       applyMiddleware(...middlewares),
       persistState(null, 'state')
-    ) //returns an Enhancer //applyMiddleware accepts positional arguments
+    )
   );
 
 };

@@ -1,6 +1,4 @@
 
-
-
 const fetchItems = () => {
   const url = '/items';
 

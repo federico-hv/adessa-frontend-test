@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
   devtool: isProduction ? 'hidden-source-map' : 'inline-source-map',
   entry: {
-    main: './static/js/apps/main.jsx'
+    main: './static/js/apps/main'
   },
   output: {
     path: path.join(__dirname, 'static', 'js'),

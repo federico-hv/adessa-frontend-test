@@ -19,4 +19,4 @@ const productList = (state = initialState, action) => {
 };
 
 
-export defaut productList;
+export default productList;

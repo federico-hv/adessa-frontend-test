@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux'
 import ProductList from './ProductList';
+import configureStore from './store';
+
+const store = configureStore();
 
 const App = () => (
-  <div>
+  <Provider store={store}>
     <div>
-      SHOPPING CART
+      <div>
+        SHOPPING CART
+      </div>
+      <ProductList />
     </div>
-    <ProductList />
-  </div>
+  </Provider>
 );
 
 export default App;

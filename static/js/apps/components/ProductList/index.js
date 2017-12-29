@@ -10,7 +10,9 @@ class ProductList extends Component {
   }
 
   componentDidMount(){
-    this.props.getItems();
+    if(this.props.items.length === 0){
+      this.props.getItems();
+    }
   }
 
   render() {

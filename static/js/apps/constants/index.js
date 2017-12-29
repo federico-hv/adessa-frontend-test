@@ -1,0 +1,3 @@
+
+export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
+export const TOGGLE_ERRORS = 'TOGGLE_ERRORS';
